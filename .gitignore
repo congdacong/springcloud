@@ -1,0 +1,3 @@
+# Project exclude paths
+/springcloud-api/target/
+/springcloud-consumer-api/target/
