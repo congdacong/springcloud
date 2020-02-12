@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springcloud-eureka-server" />
         <module name="springcloud-consumer-api" />
+        <module name="springcloud-api-8082" />
         <module name="springcloud-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="springcloud" target="1.8" />
       <module name="springcloud-api" target="1.8" />
+      <module name="springcloud-api-8082" target="1.8" />
       <module name="springcloud-consumer-api" target="1.8" />
       <module name="springcloud-eureka-server" target="1.5" />
     </bytecodeTargetLevel>
@@ -21,6 +23,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="springcloud-api" options="-parameters" />
+      <module name="springcloud-api-8082" options="-parameters" />
       <module name="springcloud-consumer-api" options="-parameters" />
     </option>
   </component>
