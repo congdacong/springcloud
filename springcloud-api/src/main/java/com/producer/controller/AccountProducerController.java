@@ -23,6 +23,7 @@ public class AccountProducerController {
     @RequestMapping("/producer/list")
     @ResponseBody
     public List<Account> list(){
+        System.out.println("api");
         return accountService.findAll();
     }
 

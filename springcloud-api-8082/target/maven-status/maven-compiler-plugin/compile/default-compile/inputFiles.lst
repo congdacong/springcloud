@@ -1,0 +1,6 @@
+/home/cgb/workspace/springcloud1/springcloud-api-8082/src/main/java/com/producer8082/SpringbootProducer8082Application.java
+/home/cgb/workspace/springcloud1/springcloud-api-8082/src/main/java/com/producer8082/controller/AccountProducerController.java
+/home/cgb/workspace/springcloud1/springcloud-api-8082/src/main/java/com/producer8082/service/impl/AccountServiceImpl.java
+/home/cgb/workspace/springcloud1/springcloud-api-8082/src/main/java/com/producer8082/dao/AccountDao.java
+/home/cgb/workspace/springcloud1/springcloud-api-8082/src/main/java/com/producer8082/service/AccountService.java
+/home/cgb/workspace/springcloud1/springcloud-api-8082/src/main/java/com/producer8082/entity/Account.java

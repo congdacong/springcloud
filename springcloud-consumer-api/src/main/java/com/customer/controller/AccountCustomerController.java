@@ -1,5 +1,6 @@
 package com.customer.controller;
 
+import com.customer.fegin.FeginServer;
 import com.producer.entity.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,21 +15,21 @@ import java.util.List;
 public class AccountCustomerController {
     final String url = "http://springCloud-api/user_producer/producer/";
     @Autowired
-    private RestTemplate restTemplate;
+    FeginServer feginServer;
+//    private RestTemplate restTemplate;
     @RequestMapping("/producer/get/{id}")
     public Account get(@PathVariable("id") String id){
-        String URL = url+"get/";
-        return  restTemplate.getForObject(URL+id,Account.class);
+//        String URL = url+"get/";
+        return  feginServer.get(id);
     }
     @RequestMapping("/producer/list")
     public List<Account> list(){
-        String URL = url+"list";
-        return restTemplate.getForObject(URL,List.class);
+//        String URL = url+"list";
+        return feginServer.list();
     }
 
     @RequestMapping("/producer/delete/{id}")
     public boolean delete(@PathVariable("id") String id){
-        String URL = url+"delete/";
-        return restTemplate.getForObject(URL+id,boolean.class);
+        return feginServer.delete(id);
     }
 }

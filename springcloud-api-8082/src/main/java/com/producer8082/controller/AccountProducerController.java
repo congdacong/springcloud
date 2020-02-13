@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.producer8082.entity.Account;
 import com.producer8082.service.AccountService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -20,14 +21,14 @@ public class AccountProducerController {
         return accountService.findById(id);
     }
 
-    @RequestMapping("/producer/list")
-    @ResponseBody
-    public List<Account> list(){
-        return accountService.findAll();
-    }
-
     @RequestMapping("/producer/delete/{id}")
     public boolean delete(@PathVariable("id") String id){
          return accountService.delete(id);
+    }
+    @RequestMapping("/producer/list")
+    @ResponseBody
+    public List<Account> list(){
+        System.out.println("api8082");
+        return accountService.findAll();
     }
 }
